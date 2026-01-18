@@ -1,0 +1,84 @@
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cover{
+    height: 200px;
+    /* background-color: aqua; */
+    width: 200px;
+    animation: rotate 2s infinite ;
+    -webkit-animation: rotate 2s infinite ;
+}
+
+lineCover{
+    height: 200px;
+    /* background-color: aqua; */
+    width: 200px;
+
+}
+
+ @keyframes rotate{ 
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+} 
+
+.rotate{
+     animation: circular-show 2s ease-in-out infinite;
+     -webkit-animation: circular-show 2s ease-in-out infinite;
+}
+ @keyframes circular-show {
+    0%{
+        stroke-dasharray: 10px, 510px ;
+        stroke-dashoffset: 0 /* determine the starting point  */
+    }
+
+    50%{
+        stroke-dasharray:200px, 510px ;
+        stroke-dashoffset: -250
+    }
+
+    100%{
+        stroke-dasharray: 200px, 510px ;
+        stroke-dashoffset: -510
+    }
+
+ }
+
+
+
+
+svg{
+    height: 200px;
+    width: 200px;
+}
+
+line{
+    animation: line-show 2s ease-in-out infinite;
+    -webkit-animation: line-show 2s ease-in-out infinite;
+}
+@keyframes line-show {
+    0%{
+        stroke-dasharray: 10, 200;
+        stroke-dashoffset: 0;
+        /* length of line cannot be above 200 */
+        /* The first value represent the length while the second the gap */
+    }
+    50%{
+        stroke-dasharray: 90,200;
+        stroke-dashoffset: -200;
+    }
+    100%{
+        stroke-dasharray: 90, 200;
+        stroke-dashoffset: -200;
+    }
+    
+}
