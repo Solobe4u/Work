@@ -6,7 +6,7 @@ body{
     min-height: 100vh;
     }
 
-    .dictionary{
+    .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +52,9 @@ button{
     border-left: 1px solid white;
 }
 
+button:hover{
+    color: grey;
+}
 .cards{
     display: grid;
     width: 18rem;
