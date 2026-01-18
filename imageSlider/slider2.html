@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Image Slider - Demo</title>
+    <link rel="stylesheet" href="test1style.css" />
+  </head>
+  <body>
+    <main class="slider-wrap">
+      <section class="slider" data-interval="3500" aria-roledescription="carousel">
+        <div class="slides">
+          <figure class="slide">
+            <img src="slide000001.jpeg" alt="River with mountains" loading="lazy" />
+            <figcaption>River in the mountains</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="https://unsplash.com/photos/man-in-overalls-cleaning-with-a-mop-and-cart-15igcTXHBN4" alt="Road and trees" loading="lazy" />
+            <figcaption>Country road in fall</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="https://unsplash.com/photos/man-looking-out-window-at-snowy-trees-from-cozy-room-cY_tQ10NNyk" alt="Bright sea view" loading="lazy" />
+            <figcaption>Bright sea view</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="https://unsplash.com/photos/young-woman-sitting-by-the-water-at-sunset-ePPkHi8ZKCQ" alt="Mountains and sky" loading="lazy" />
+            <figcaption>Mountains and sky</figcaption>
+          </figure>
+        </div>
+
+        <button class="slider-btn prev" aria-label="Previous slide">❮</button>
+        <button class="slider-btn next" aria-label="Next slide">❯</button>
+
+        <div class="indicators" role="tablist" aria-label="Slide indicators"></div>
+      </section>
+    </main>
+    <script src="test1script.js"></script>
+  </body>
+</html>
