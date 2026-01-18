@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full">
+        <div class="detail">
+            <div class="temp">
+                <span class="temp1">25</span>
+                <span>°C</span>
+            </div>
+
+            <div class="city">
+                <p>San Francisco</p>
+            </div>
+
+            <div class="time">
+                <p>2:30PM - Sunday 09-14-2025</p>
+            </div>
+
+            <div class="appearance">
+                <p class="state">California</p>
+
+                <p class="condition">Cloudy</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <form>
+                <input type="text" class="inPut" placeholder="Search for a location"> 
+                <button type="submit" id="btn">Search</button>  <!--It took me almost 2hrs to detect that i used a button type of button instead of submit which made my event listener not to work-->
+            </form>
+        </nav>
+
+    </div>
+
+</body>
+    <script src="script.js"></script>
+</html>
