@@ -25,11 +25,14 @@ body{
     font-size: large;
 }
 
-.page{
+.numbers{
     list-style: none;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-        color: azure;
+    color: azure;
+    width: 50%;
 
 }
 
@@ -48,5 +51,18 @@ body{
     background-color: lightgray;
 }
 
-
+.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background-color: white;
+    color: grey;
+    width: 2rem;
+    height: 2rem;
+}
 
