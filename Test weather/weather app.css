@@ -1,0 +1,61 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.full{
+    background-color: lightskyblue;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail{
+    color: red;
+}
+
+.temp{
+    font-size: 72px;
+    padding: 5px;
+}
+
+.city{
+    font-size:32px ;
+}
+
+.time{
+    font-size: 27px;
+}
+
+.appearance{
+    font-size: 15px;
+    margin: 8px;
+    margin-left: 3px;
+}
+
+.inPut{
+    border: none;
+    margin-bottom: 5px; 
+    padding: 16px 0;
+    width: 98%; 
+    outline: none;
+    font-size: 17.6px;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+
+}
+
+button{
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 16px;
+    font-size: 17.6px;
+    outline: none;
+}
+
+nav{
+    height: 100px;
+    margin: 80px;
+}

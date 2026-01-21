@@ -1,0 +1,41 @@
+/* Image slider styles */
+*{box-sizing:border-box}
+:root{
+  --slider-width:clamp(300px, 90vw, 1000px);
+  --slider-height:clamp(180px, 45vh, 600px);
+  --accent:#ffffffdd;
+  --accent-strong:#ffffff;
+}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;background:#111}
+.slider-wrap{padding:40px}
+.slider{width:var(--slider-width);height:var(--slider-height);position:relative;overflow:hidden;border-radius:10px;background:#000;color:var(--accent);box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.slides{display:flex;transition:transform .6s cubic-bezier(.2,.9,.2,1);height:100%;}
+.slide{min-width:100%;height:100%;display:block;position:relative;overflow:hidden}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.slide figcaption{position:absolute;left:12px;bottom:12px;background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.25));padding:8px 12px;border-radius:6px;font-size:0.95rem}
+
+/* When image fails to load, show overlay to indicate a broken image */
+.slide.broken{background:#222;color:#999}
+.slide.broken img{opacity:0;visibility:hidden}
+.slide.broken::after{content:"Image unavailable";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:600;color:#eee;background:linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.35));font-size:1.05rem}
+
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.1));border:none;color:var(--accent-strong);width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(2px);font-size:18px}
+.slider-btn:focus{outline:2px solid #fff}
+.slider-btn.prev{left:12px}
+.slider-btn.next{right:12px}
+
+.indicators{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:8px;z-index:10}
+.indicator{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.3);border:none;padding:0;cursor:pointer}
+.indicator[aria-current='true']{background:var(--accent-strong);width:28px;border-radius:20px;transition:width .3s ease}
+
+/* Small screens */
+@media (max-width:480px){
+  .slider{border-radius:6px}
+  .slide figcaption{left:8px;right:8px;bottom:8px;font-size:0.85rem;border-radius:4px}
+  .slider-btn{width:40px;height:40px}
+}
+
+/* Accessibility (reduced motion) */
+@media (prefers-reduced-motion: reduce){
+  .slides{transition:none}
+}
