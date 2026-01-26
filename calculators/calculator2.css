@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.cover{
+    height: auto;
+    width: auto;
+    padding: 22px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px gray;
+
+}
+
+button {
+    cursor: pointer;
+    height: 60px;
+    width: 65px;
+    border: 0;
+    margin: 5px;
+    font-size: 20px;
+}
+
+#displays{
+    height: 150px;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 60px;
+    margin-bottom: 20px;
+
+}
+
+button#equals{
+    height: 130px;
+    background-color: gray;
+    color: #000;
+}
+
+.cover button#clear{
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.cover button.operators{
+    background-color: black;
+    color: white;
+}
+
+.cover button.numbers{
+    background-color: black;
+    color: white;
+
+}
