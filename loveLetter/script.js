@@ -130,26 +130,85 @@ applyConfig();
         }
     }
 
-    // Music Control
-    const musicToggle = document.getElementById('musicToggle');
-    const bgMusic = document.getElementById('bgMusic');
-    let isPlaying = false;
+    
+    // // Music Control
+    // // This needs loop to be in audio in html if not it will just stop playing after first song.
+    // const musicToggle = document.getElementById('musicToggle');
+    // const bgMusic = document.getElementById('bgMusic');
+    // let isPlaying = false;
 
-    musicToggle.addEventListener('click', function() {
-        if (isPlaying) {
-            bgMusic.pause();
-            musicToggle.textContent = '🎵';
-            isPlaying = false;
-        } else {
-            bgMusic.play().then(() => {
-                musicToggle.textContent = '🔊';
-                isPlaying = true;
-            }).catch(() => {
-                musicToggle.textContent = '❌';
-                console.log('Music could not be played');
-            });
-        }
-    });
+    // musicToggle.addEventListener('click', function() {
+    //     if (isPlaying) {
+    //         bgMusic.pause();
+    //         musicToggle.textContent = '🎵';
+    //         isPlaying = false;
+    //     } else {
+    //         bgMusic.play().then(() => {
+    //             musicToggle.textContent = '🔊';
+    //             isPlaying = true;
+    //         }).catch(() => {
+    //             musicToggle.textContent = '❌';
+    //             console.log('Music could not be played');
+    //         });
+    //     }
+    // });
+
+    // 1. Add your track URLs here while ensuring audio doesnt have loop attribute in HTML
+const playlist = [
+  'https://github.com/Solobe4u/Work/raw/refs/heads/main/audioFiles/Lady_Gaga_feat._Bruno_Mars_-_Die_With_A_Smile_(mp3.pm).mp3',
+  'https://github.com/Solobe4u/Work/raw/refs/heads/main/audioFiles/yung_kai_-_blue_@BaseNaija.mp3',
+   'https://github.com/Solobe4u/Work/raw/refs/heads/main/audioFiles/Ed%20Sheeran%20-%20Collide%20%5BOfficial%20Lyric%20Video%5D(MP3_160K).mp3'
+];
+
+let currentTrackIndex = 0;
+const musicToggle = document.getElementById('musicToggle');
+const bgMusic = document.getElementById('bgMusic');
+let isPlaying = false;
+
+// Function to load and play a track
+function playTrack(index) {
+  bgMusic.src = playlist[index];
+  bgMusic.play().then(() => {
+    musicToggle.textContent = '🔊';
+    isPlaying = true;
+  }).catch(err => {
+    musicToggle.textContent = '❌';
+    console.log('Playback failed:', err);
+  });
+}
+
+// 2. Listen for when a song finishes
+bgMusic.addEventListener('ended', function() {
+  currentTrackIndex++;
+  
+  // If we reach the end of the list, go back to the first track (0)
+  if (currentTrackIndex >= playlist.length) {
+    currentTrackIndex = 0;
+  }
+  
+  playTrack(currentTrackIndex);
+});
+
+// 3. Updated Toggle Logic
+musicToggle.addEventListener('click', function() {
+  if (isPlaying) {
+    bgMusic.pause();
+    musicToggle.textContent = '🎵';
+    isPlaying = false;
+  } else {
+    // If the src is empty (first click), start the first track
+    if (!bgMusic.src || bgMusic.src === "") {
+      playTrack(currentTrackIndex);
+    } else {
+      bgMusic.play();
+      musicToggle.textContent = '🔊';
+      isPlaying = true;
+    }
+  }
+});
+
+
+
 
     // Love Note Toggle
     const loveButton = document.getElementById('loveButton');

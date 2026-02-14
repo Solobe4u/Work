@@ -126,7 +126,7 @@ body {
 .subtitle {
     font-family: var(--font-elegant);
     font-size: clamp(1.4rem, 4vw, 2rem);
-    color: var(--deep-pink);
+    color: var(black);
     font-weight: 400;
     font-style: italic;
     letter-spacing: 1px;
@@ -185,7 +185,7 @@ body {
 .character h3 {
     font-family: var(--font-special);
     font-size: 2rem;
-    color: var(--primary-pink);
+    color: var(black);
     margin-bottom: 0.5rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -193,7 +193,7 @@ body {
 
 .character p {
     font-family: var(--font-elegant);
-    color: var(--deep-pink);
+    color: var(black);
     font-style: italic;
 }
 
@@ -279,7 +279,7 @@ body {
 .love-note p {
     font-family: var(--font-elegant);
     font-size: clamp(1.3rem, 4vw, 1.8rem);
-    color: var(--deep-pink);
+    color: var(black);
     line-height: 1.8;
     margin: 0;
     font-weight: 500;
@@ -350,7 +350,7 @@ body {
 
 .memory-card p {
     font-family: var(--font-body);
-    color: var(--deep-pink);
+    color: var(black);
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -468,7 +468,10 @@ body {
     position: relative;
     height: 100px;
     margin-top: 1rem;
+
 }
+
+
 
 /* Special Message */
 .special-message {
@@ -493,7 +496,7 @@ body {
 .message-container p {
     font-family: var(--font-elegant);
     font-size: clamp(1.2rem, 4vw, 1.6rem);
-    color: var(--deep-pink);
+    color: var(black);
     line-height: 1.8;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -502,7 +505,7 @@ body {
 .signature {
     font-family: var(--font-heading);
     font-size: clamp(1.5rem, 4vw, 2rem);
-    color: var(--primary-pink);
+    color: var(black);
     font-weight: 700;
     margin-top: 2rem;
     font-style: italic;
