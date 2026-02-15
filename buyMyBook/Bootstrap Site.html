@@ -1,0 +1,476 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book</title>
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> <!--BS icon-->
+        <style>
+            section{
+                padding: 60px 0;
+            }
+        </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-md"> <!--fixed-bottom moves it to bottom-->
+    <div class="container-xxl">
+        <a href="#intro" class="navbar-brand">
+            <span class="fw-bold text-secondary">
+                <i class="bi bi-book-half"></i> <!--book icon-->
+                NET NAIJA SERIES - The Book
+            </span>
+        </a>
+            <!-- toggle button for mobile nav-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navbar links -->
+        <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#topics">About the Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Get in Touch</a>
+                </li>
+                <li class="nav-item d-md-none">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+                <li class="nav-item ms-2 d-none d-md-inline">
+                    <a class="btn btn-secondary" href="#pricing">Buy Now</a>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+
+
+
+
+
+
+    </div>
+</nav>
+
+
+
+<!-- Main image & Intro Text -->
+<section id="intro">
+    <div class="container-lg">
+        <div class="row justify-content-center align-items-center"> <!--Justify is jst like horizontal while align is like vertical-->
+            <div class="col-md-5 text-center text-md-start">
+                <h1>
+                    <div class="display-2">Black Belt</div>
+                    <div class="display-5 text-muted">Your Coding Skills</div>
+                </h1>
+                <p class="lead my-4 text-muted">Visit our Site today to order.</p>
+                <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+
+                <!-- Open sidebar / offcanvas-->
+                <a href="#sidebar1" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+                    Explore my other books
+                </a>
+            </div>
+            <div class="col-md-5 text-center d-none d-md-block"> <!--Wont display until its medium and above screen where it shows in block-->
+                <!-- Tool tip -->
+                 <span class="tt1" data-bs-placement="bottom" title="Net Naija Book Cover"> <!-- U will need to place a js at d bottom of body to execute tooltip -->
+                    <img class="img-fluid" src="Assets Bootstrap/book.png" alt="book"><!--Fluid makes d img to take d entire 5 col of its parent-->
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans -->
+<section id="pricing" class="bg-light mt-5"> <!--Cards-->
+    <div class="container-lg">
+        <div class="text-center">
+            <h2>Pricing Plans</h2>
+            <p class="lead text-muted">Choose a pricing plan to suit you</p>
+        </div>
+
+        <div class="row my-5 align-items-center justify-content-center g-0">
+            <div class="col-8 col-lg-4 col-xl-3">
+                <div class="card border-0">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Starter Edition</h4>
+                        <p class="lead card-subtitle">eBook download Only</p>
+                         <p class="display-5 my-4 fw-bold text-primary">$20.50</p>
+                        <p class="card-text mx-5 text-muted d-none d-lg-block">This eBook equips you with all the knowledge to become successful in life.</p>
+                        <a href="#" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-9 col-lg-4">
+                <div class="card border-2 border-warning">
+                    <div class="card-header text-center text-danger">Most Popular</div>
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Complete Edition</h4>
+                        <p class="lead card-subtitle">eBook download & all updates</p>
+                         <p class="display-5 my-4 fw-bold text-primary">$30.85</p>
+                        <p class="card-text mx-5 text-muted d-none d-lg-block">Do not miss this opportunity to acquire  all the knowledge to become successful in life.</p>
+                        <a href="#" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-8 col-lg-4 col-xl-3">
+                <div class="card border-0">
+                    <div class="card-body text-center py-4">
+                        <h4 class="card-title">Ultimate Edition</h4>
+                        <p class="lead card-subtitle">Download, Updates & Extras</p>
+                         <p class="display-5 my-4 fw-bold text-primary">$34.50</p>
+                        <p class="card-text mx-5 text-muted d-none d-lg-block">Dont miss this opportunity.</p>
+                        <a href="#" class="btn btn-outline-info btn-lg mt-3">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Topics at a glance -->
+<section id="topics"> <!--Accordion-->
+    <div class="container-md">
+        <div class="text-center">
+            <h2>Inside the Book</h2>
+            <p class="lead text-muted">A quick glance at the topics you will learn</p>
+        </div>
+        <div class="row my-5 g-5 justify-content-around align-items-center">
+            <div class="col-6 col-lg-4">
+                <img src="Assets Bootstrap/book2.png" class="img-fluid" alt="eBook2">
+            </div>
+            <div class="col-lg-6"> <!--This makes the img and Accordion to lie side by side on lg screen-->
+            <!--Accordion-->
+            <div class="accordion" id="chapters">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">Chapter 1 - Your First Web Page</button>
+                    </h2>
+                    <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters"> <!--Remove show to make it hidden by default-->
+                        <div class="accordion-body">
+                            <p>I have not memorized all these by any means.</p>
+                            <p>You just need to check out the documentation if you are unsure what class to use</p>
+                            <p>I would never recommend anyone memorizing all these classes,</p>
+                            <p>that is a totally pointless exercise and a complete waste of space in the mind.</p>
+                            <p>Just check out the doc.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--2nd Chapter-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-2">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">Chapter 2 - Mastering CSS</button>
+                    </h2>
+                    <div id="chapter-2" class="accordion-collapse collapse " aria-labelledby="heading-2" data-bs-parent="#chapters"> 
+                        <div class="accordion-body">
+                            <p>I have not memorized all these by any means.</p>
+                            <p>You just need to check out the documentation if you are unsure what class to use</p>
+                            <p>I would never recommend anyone memorizing all these classes,</p>
+                            <p>that is a totally pointless exercise and a complete waste of space in the mind.</p>
+                            <p>Just check out the doc.</p>
+                        </div>
+                    </div>
+                </div>
+            <!--3rd Chapter-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-3">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">Chapter 3 - Javascript Lessons</button>
+                    </h2>
+                    <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                            <p>I have not memorized all these by any means.</p>
+                            <p>You just need to check out the documentation if you are unsure what class to use</p>
+                            <p>I would never recommend anyone memorizing all these classes,</p>
+                            <p>that is a totally pointless exercise and a complete waste of space in the mind.</p>
+                            <p>Just check out the doc.</p>
+                        </div>
+                    </div>
+                </div>
+            <!--4th Chapter-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-4">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">Chapter 4 - JQuery Lessons</button>
+                    </h2>
+                    <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters">
+                        <div class="accordion-body">
+                            <p>I have not memorized all these by any means.</p>
+                            <p>You just need to check out the documentation if you are unsure what class to use</p>
+                            <p>I would never recommend anyone memorizing all these classes,</p>
+                            <p>that is a totally pointless exercise and a complete waste of space in the mind.</p>
+                            <p>Just check out the doc.</p>
+                        </div>
+                    </div>
+                </div>
+            <!--5th Chapter-->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-5">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-5" aria-expanded="false" aria-controls="chapter-5">Chapter 5 - Alternative to Chapter 1</button>
+                    </h2>
+                    <div id="chapter-1" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#chapters"> <!--Dis ID makes it to be different from oda chapters(it will act like chapter 1 if it is Chapter-1)-->
+                        <div class="accordion-body"> <!--If u make two chapters d same and only add show for one, one will open while d oda closes-->
+                            <p>I have not memorized all these by any means.</p>
+                            <p>You just need to check out the documentation if you are unsure what class to use</p>
+                            <p>I would never recommend anyone memorizing all these classes,</p>
+                            <p>that is a totally pointless exercise and a complete waste of space in the mind.</p>
+                            <p>Just check out the doc.</p>
+                        </div>
+                    </div>
+                </div>
+            <!--Chapter end-->
+            </div>
+            </div>    <!--Closing tag  for d container covering both img and accordion at 4:6 respe for lg-->
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Review List -->
+<section id="reviews" class="bg-light"> <!--List groups & Icon-->
+    <div class="container-lg"> <!--Container lg-->
+        <div class="text-center">
+            <h2><i class="bi bi-stars"></i>Book Reviews</h2> <!--Adds star icon here-->
+            <p>What People have said about the book...</p>
+        </div>
+        <div class="row justify-content-center my-5"> <!--Row must be under container-->
+            <div class="col-lg-8">
+                <div class="list-group">
+                    <div class="list-group-item py-3">
+                        <div class="pb-2"> <!--This will contain d star rating icon. -->
+                            <i class="bi bi-star-fill text-danger"></i>
+                            <i class="bi bi-star-fill text-danger"></i>
+                            <i class="bi bi-star-fill text-danger"></i>
+                            <i class="bi bi-star-fill text-danger"></i>
+                            <i class="bi bi-star-fill text-danger"></i>
+                        </div> 
+                        <h5 class="mb-1">A must buy for every individual who wants to succeed.</h5>
+                        <p class="mb-1">This book breaksdown everything you need to know. it gives you daily activities
+                            that you have to follow. It looks for a way to fix these activities with your schedule.
+                        </p>
+                        <small>Review by Solo</small>
+                    </div>
+                    <!--Another Group List-->
+                    <div class="list-group-item py-3">
+                        <div class="pb-2"> <!--This will contain d star rating icon. -->
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div> 
+                        <h5 class="mb-1">A must buy for every individual who wants to succeed.</h5>
+                        <p class="mb-1">This book breaksdown everything you need to know. it gives you daily activities
+                            that you have to follow. It looks for a way to fix these activities with your schedule.
+                        </p>
+                        <small>Review by Goodluck</small>
+                    </div>
+                    <!--Another Group List-->
+                    <div class="list-group-item py-3">
+                        <div class="pb-2"> <!--This will contain d star rating icon. -->
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                        </div> 
+                        <h5 class="mb-1">A must buy for every individual who wants to succeed.</h5>
+                        <p class="mb-1">This book breaksdown everything you need to know. it gives you daily activities
+                            that you have to follow. It looks for a way to fix these activities with your schedule.
+                        </p>
+                        <small>Review by Paulet</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Contact Form-->
+<!--Form-Control, Form-label, Form-select, Input-group, Input-group-text-->
+
+<section id="contact">
+    <div class="container-lg">
+        <div class="text-center">
+            <h2>Get in Touch</h2>
+            <p>Questions to ask? Fill out the form to contact me directly</p>
+        </div>
+
+        <div class="col-lg-6">
+            <form action="#">
+                <label for="email" class="form-label">Email Address:</label> <!--for is d Id-->
+                <div class="mb-4 input-group">
+                 <input type="email" class="form-control" id="email" placeholder="Paulet@gmail.com">
+            <!--Tool tip--> 
+                    <div class="tt1" data-bs-placement="top" title="Please provide your email">
+                        <span class="input-group-text">
+                            <i class="bi bi-question-circle"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" class="form-control" placeholder="Paulet">
+
+                <label for="subject" class="form-label">What is your question about?</label>
+                <select name="sub" id="subject" class="form-select">
+                    <option value="content" selected>Content Query</option>
+                    <option value="pricing" >Pricing Query</option>
+                    <option value="other" >Other Query</option>
+                </select>
+
+                <label for="query" class="form-label">Your Query....</label>
+                <textarea name="que" class="form-control" id="query" style="height: 140px; width:500px;"></textarea>
+                <div class="mt-4 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!--For Premium Subscribers--> <br>
+        <div class="text-center">
+            <h2>For VIP, Contact us through</h2>
+            <p>Questions to ask? Fill out the form to contact me directly</p>
+        </div>
+
+        <div class="col-lg-6">
+            <form action="#">
+                <label for="email" class="form-label">Email Address:</label> 
+                <div class="input-group mb-4">
+                    <span class="input-group-text">
+                        <i class="bi bi-envelope-fill"></i>
+                    </span>
+                <input type="email" class="form-control" id="email" placeholder="Paulet@gmail.com">
+                </div>
+
+                <label for="name" class="form-label">Name:</label>
+                <div class="input-group mb-4">
+                <input type="text" id="name" class="form-control" placeholder="Paulet">
+                    <span class="input-group-text">
+                        <i class="bi bi-person-fill"></i>
+                    </span>
+                </div>
+
+                <label for="subject" class="form-label">What is your question about?</label>
+                <div class="input-group mb-4">
+                    <span class="input-group-text"><i class="bi bi-chat-right-dots-fill"></i></span>
+                <select name="sub" id="subject" class="form-select">
+                    <option value="content" selected>Content Query</option>
+                    <option value="pricing" >Pricing Query</option>
+                    <option value="other" >Other Query</option>
+                </select>
+                </div>
+
+                <div class="form-floating mb-4 mt-5">
+                    <textarea name="que" class="form-control" id="query" style="height: 140px; width:500px;"></textarea>
+                    <label for="query" >Your Query....</label>
+                </div>
+
+                <div class="mb-4 text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- Modal or Pop-up trigger -->
+<section class="bg-light">
+    <div class="container">
+        <div class="text-center">
+            <h2>Stay in the Loop </h2>
+            <p class="lead">Get the latest update</p>
+        </div>
+        <div class=" row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="text-muted my-4">You can get all information via email after you register. To register you just have to fill in the form.</p>
+                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#pos-modal"> <!--toggle tells it that its modal while d target tells us d Id d button links to.-->
+                    Register for Updates
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal Itself-->
+<div class="modal fade" id="pos-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Get the Latest Updates</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    They say Knowledge is Power
+                </p>
+                <label for="modal-email" class="form-label"> Your email address:</label>
+                <input type="email" class="form-control" id="modal-email" placeholder="Mike@gmail.com">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-warning">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- OFFCANVAS -->
+<div class="offcanvas offcanvas-end" id="sidebar1" tabindex="-1" aria-labelledby="sidebar-label">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Knowledge is power. Don't be left out</p>
+        <!-- Dropdown -->
+        <div class="dropdown" mt-3> 
+            <button class="btn btn-primary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown"> <!--D Dropdown- toggle only brings out d arrow sign while it appears d same but loose functionality by removing d data-bs-toggle -->
+                Choose a book title
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                <li><a href="#" class="dropdown-item">Become a Front End Genius</a></li>
+                <li><a class="dropdown-item" href="#">Master Bootstrap</a></li>
+                <li><a href="#" class="dropdown-item">Levelling up Your Jquery</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>//To activate tooltips 
+        const tooltip1 = document.querySelectorAll('.tt1')
+        tooltip1.forEach(T1 => {
+            new bootstrap.tooltip(T1) 
+        })//Its still worked without this script perhaps due to d latest version of BS
+    </script>
+
+</body>
+</html>
