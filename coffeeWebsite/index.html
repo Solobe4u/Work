@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><!-- Font Awesome CDN for icon -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- header / Navbar -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar section-content">
             <a href="#" class="nav-logo">
                 <h2 class="logo-text">☕ Coffee</h2>
             </a>
             <ul class="nav-menu">
+                <button id="menu-close" class="fas fa-times"></button>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Home</a>
                 </li>
@@ -36,14 +39,98 @@
                 </li>
 
             </ul>
+             <button id="menu-open" class="fas fa-bars"></button>
+
         </nav>
-
-
-
-
-
-
-
     </header>
+    <main>
+        <!-- tea Section -->
+         <section class="tea-section">
+            <div class="section-content">
+                <div class="tea-details">
+                    <h2 class="title">Outstanding Coffee</h2>
+                    <h3 class="subtitle">Make your day exceptional with our unique Coffee!</h3>
+                    <p class="description">Welcome to the coffee paradise, where every cup sparks joy.</p>
+
+                    <div class="buttons">
+                        <a href="#" class="button order">Order Now</a>
+                        <a href="#" class="button contact-us">Contact Us</a>
+                    </div>
+                    <div class="tea-image-wrapper">
+                        <img src="images/img 3.png" alt="tea" class="tea-image">
+                    </div>
+                </div>
+            </div>
+         </section>
+
+            <!-- About Section -->
+             <section class="about-section">
+                <div class="section-content">
+                    <div class="about-image-wrapper">
+                        <img src="images/img 2.png" alt="about" class="about-image">
+                    </div>
+                    <div class="about-details">
+                        <h2 class="section-title">About Us</h2>
+                        <h3 class="subtitle">Discover the story behind our exceptional Coffee!</h3>
+                        <p class="description">At our coffee shop, we are passionate about crafting the perfect cup of coffee. Our journey began with a love for quality beans and a desire to create a welcoming space for coffee enthusiasts. We source our beans from sustainable farms around the world, ensuring that every sip supports ethical practices. Our skilled baristas are dedicated to delivering an exceptional coffee experience, whether you prefer a classic espresso or a creative latte. Join us in celebrating the art of coffee and indulge in the rich flavors that make each cup special.</p>
+                        <div class="social-link-list">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <!-- Menu Section -->
+             <section class="menu-section">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="section-content">
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <img src="images/img 1.png" alt="Hot Coffee" class="menu-image">
+                            <h3 class="menu-title">Hot Coffee</h3>
+                            <p class="menu-description">Experience the warmth and richness of our hot coffee, crafted to perfection for your ultimate satisfaction.</p>
+                        </li>
+
+                        <li class="menu-item">
+                            <img src="images/img 5.png" alt="Burger & French fries" class="menu-image">
+                            <h3 class="menu-title">Burger & Frenchfries</h3>
+                            <p class="menu-description">Quick bite</p>
+                    
+                        </li>
+
+                        <li class="menu-item">
+                            <img src="images/img 4.png" alt="Cold Coffee" class="menu-image">
+                            <h3 class="menu-title">Cold Beverages</h3>
+                            <p class="menu-description">Cold Drink to make you cool</p>
+                        </li>
+
+                        <li class="menu-item">
+                            <img src="images/img 6.png" alt="Desserts" class="menu-image">
+                            <h3 class="menu-title">Desserts</h3>
+                            <p class="menu-description">Satiate your palate</p>
+                        </li>
+
+                        <li class="menu-item">
+                            <img src="images/img 7.png" alt="Refreshment" class="menu-image">
+                            <h3 class="menu-title">Refreshment</h3>
+                            <p class="menu-description">Icy refreshing drink to make you feel refreshed.</p>
+                        </li>
+
+                        <li class="menu-item">
+                            <img src="images/img 8.png" alt="Special Combinations" class="menu-image">
+                            <h3 class="menu-title">Special Combinations</h3>
+                            <p class="menu-description">Your favourite drinking and eating combinations</p>
+                        </li>
+
+
+                    </ul>
+                
+                </div>
+             </section>
+                
+    </main>
 </body>
+    <script src="script.js"></script>
 </html>

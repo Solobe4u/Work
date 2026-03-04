@@ -1,5 +1,6 @@
 
 /* Import Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Bebas+Neue&family=Miniver&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Bebas+Neue&family=Miniver&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap');
 
 *{
@@ -19,12 +20,12 @@
     --medium-gray-color: #888;
 
     /* Font Size */
-    --font-size-s:1rem;
-    --font-size-n:1.25rem;
-    --font-size-m:1.5rem;
-    --font-size-l:2rem;
-    --font-size-xl:2.5rem;
-    --font-size-xxl:3rem;
+    --font-size-s:0.9rem;
+    --font-size-n:1rem;
+    --font-size-m:1.3rem;
+    --font-size-l:1.7rem;
+    --font-size-xl:2.2rem;
+    --font-size-xxl:2.5rem;
 
     /* Font Weight */
     --font-weight-regular:400;
@@ -33,23 +34,366 @@
     --font-weight-bold:700;
 
     /* Border radius */
-    --border-radius-s: 10px;
+    --border-radius-s: 8px;
     --border-radius-m: 30px;
     --border-radius-circle: 50%;
 
 
 /* Site Max Width */
---site-max-width: 1400px;
+--site-max-width: 1300px;
 }
 
+
+/* Navbar style */
 header{
     background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+
+}
+
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar .nav-menu{
+    display: flex;
+    gap: 13px;
 }
 
 .navbar .nav-menu .nav-link{
     color: var(--white-color);
+    padding: 10px 18px;
+    /* background: var(--secondary-color); */
+    border-radius: var(--border-radius-m);
+    font-size: var(--font-size-m);
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+
+.navbar .nav-menu .nav-link:hover{
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    }
+
+.navbar :where(#menu-close, #menu-open){
+    display: none;
 }
 
 .navbar .nav-logo .logo-text{
     color: var(--white-color);
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-semi-bold);
+
 }
+
+/* Site Style */
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.tea-section{
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.tea-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    gap: 50px;
+    padding: 100px 20px;
+    min-height: 100vh;
+
+}
+
+.tea-section .tea-details .title{
+    font-size: var(--font-size-xxl);
+    font-family: 'Miniver', sans-serif;
+}
+
+.tea-section .tea-details .subtitle{
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-l);
+    max-width: 70%;
+    margin-top: 10px;
+}
+
+.tea-section .tea-details .description{
+    font-size: var(--font-size-m);
+    /* color: var(--medium-gray-color); */
+    margin: 20px 0;
+    max-width: 70%;
+}   
+
+.tea-section .tea-image-wrapper{
+    max-width: 500px;
+    margin-right: 30px;
+}
+
+.tea-section .tea-details .buttons{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.tea-section .tea-details .button{
+    background: var(--secondary-color);
+    color: var(--white-color);
+    padding: 12px 30px;
+    border: 3px solid transparent;
+    border-radius: var(--border-radius-m);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+
+ .tea-section .tea-details .button:hover{/*,.tea-section .tea-details .contact-us{ */
+    background: transparent;
+    color: var(--white-color);
+    border-color: var(--white-color);
+}
+
+/* About Section Style */
+
+.about-section{
+    background: var(--light-pink-color);
+    padding: 130px 0;
+}
+
+.about-section .about-details{
+    max-width: 50%;
+}
+.about-section .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.section-content{
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title{
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    text-transform: uppercase; 
+    padding: 60px auto 100px;
+}
+
+.section-title::after{/* Add a decorative line below the section title using a pseudo-element */
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 2px auto 15px;
+    border-radius: var(--border-radius-s);
+}
+
+
+.about-section .about-details .description{
+    font-size: var(--font-size-m);
+    color: var(--black-color);
+    margin: 50px 0 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.about-section .about-details .section-title{
+    padding: 0;
+}
+
+.about-section .social-link-list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.about-section .social-link-list .social-link{
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+.about-section .social-link-list .social-link:hover{
+    color: var(--secondary-color);
+}
+
+.about-section .section-content{
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+
+}
+
+/* Menu Section */
+.menu-section .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-section .menu-list .menu-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% / 3 - 110px);
+}
+
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 85%;
+    aspect-ratio: 1;
+}
+
+
+
+/* .tea-section .tea-details .contact-us:hover{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-color: var(--secondary-color);   
+} */
+/* Responsive Media query code for max width 900px */
+@media screen and (max-width: 900px) {
+
+    :root {
+        --font-size-s:0.8rem;
+        --font-size-n:0.9rem;
+        --font-size-m:1.1rem;
+        --font-size-l:1.5rem;
+        --font-size-xl:2rem;
+        --font-size-xxl:2.3rem;
+    }
+
+    .navbar :where(#menu-close, #menu-open){
+        font-size: var(--font-size-l);
+        display: block;
+    }
+
+    .navbar #menu-close{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open{
+        color: var(--white-color);
+    }
+
+
+    .navbar .nav-menu{
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: -300px;
+        /*Initiallyhidethemenubypositioningitoff-screen*/padding: 100px;
+        height: 100%;
+        width: 300px;
+        background: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        padding-top: 100px;
+        align-items: center;
+        transition: left 0.3s ease;
+        -webkit-transition: left 0.3s ease;
+        -moz-transition: left 0.3s ease;
+        -ms-transition: left 0.3s ease;
+        -o-transition: left 0.3s ease; /* Add transition for smooth sliding effect when the menu is shown or hidden */
+}
+    .navbar .nav-menu .nav-link{
+        display: block;
+        color: var(--primary-color);
+        margin-top: 15px;
+        /* padding: 20px; */
+        font-size: var(--font-size-l);
+    }
+
+        body.menu-open header::before{
+        content: "";/* Create a pseudo-element that covers the entire viewport when the menu is open to prevent interaction with the underlying content */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px); /* Optional: Add a blur effect to the background when the menu is open */
+        background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background to indicate that the menu is open */
+        }
+    body.menu-open .navbar .nav-menu{
+        left: 0px; /* Show the menu by positioning it on-screen when the "menu-open" class is added to the body element */
+    }
+
+.tea-section .section-content{/* Adjust the layout for smaller screens by stacking the content vertically and centering it */
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    gap: 55px;
+    padding: 30px 20px 20px;
+}
+
+.tea-section .tea-image-wrapper{
+    max-width: 400px;
+    margin: 0 auto; /* Center the image wrapper on smaller screens */
+}
+
+.tea-section .tea-details .buttons {
+    justify-content: center; /* Center the buttons on smaller screens */
+
+}
+
+.tea-section .tea-details :is(.subtitle, .description), .about-section .about-details{
+    max-width: 100%; /* Allow the subtitle and description to take full width on smaller screens */
+    /*.tea-section .tea-details .subtitle,
+        .tea-section .tea-details .description, would have been written if is method of grouping wasnt used*/
+}
+}
+
+
