@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"><!-- Font Awesome CDN for icon -->
+
+    <!-- Font Awesome CDN for icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Linking Swiper CSS for carousel and scrolling-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <!-- https://swiperjs.com/get-started#use-swiper-from-cdn --> <!--  page link  -->
+
+    <!-- The custom CSS should be linked after the Swiper CSS because it needs to override some of the default styles -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <!-- header / Navbar -->
@@ -44,24 +55,24 @@
         </nav>
     </header>
     <main>
-        <!-- tea Section -->
-         <section class="tea-section">
-            <div class="section-content">
-                <div class="tea-details">
-                    <h2 class="title">Outstanding Coffee</h2>
-                    <h3 class="subtitle">Make your day exceptional with our unique Coffee!</h3>
-                    <p class="description">Welcome to the coffee paradise, where every cup sparks joy.</p>
+            <!-- tea Section -->
+             <section class="tea-section">
+                    <div class="section-content">
+                        <div class="tea-details">
+                            <h2 class="title">Outstanding Coffee</h2>
+                            <h3 class="subtitle">Make your day exceptional with our unique Coffee!</h3>
+                            <p class="description">Welcome to the coffee paradise, where every cup sparks joy.</p>
 
-                    <div class="buttons">
-                        <a href="#" class="button order">Order Now</a>
-                        <a href="#" class="button contact-us">Contact Us</a>
+                            <div class="buttons">
+                                <a href="#" class="button order">Order Now</a>
+                                <a href="#" class="button contact-us">Contact Us</a>
+                            </div>
+                            <div class="tea-image-wrapper">
+                                <img src="images/img 3.png" alt="tea" class="tea-image">
+                            </div>
+                        </div>
                     </div>
-                    <div class="tea-image-wrapper">
-                        <img src="images/img 3.png" alt="tea" class="tea-image">
-                    </div>
-                </div>
-            </div>
-         </section>
+             </section>
 
             <!-- About Section -->
              <section class="about-section">
@@ -90,7 +101,7 @@
                         <li class="menu-item">
                             <img src="images/img 1.png" alt="Hot Coffee" class="menu-image">
                             <h3 class="menu-title">Hot Coffee</h3>
-                            <p class="menu-description">Experience the warmth and richness of our hot coffee, crafted to perfection for your ultimate satisfaction.</p>
+                            <p class="menu-description">Experience the warmth and richness of our hot coffee.</p>
                         </li>
 
                         <li class="menu-item">
@@ -129,8 +140,149 @@
                 
                 </div>
              </section>
+
+             <!-- Testimonial Section -->
+             <section class="testimonials-section">
+                <h2 class="section-title">Testimonials</h2>
+                <div class="section-content">
+                    <div class="slider-container swiper"><!--  swiper class for carousel -->
+                        <div class="slider-wrapper">
+                            <ul class="testimonials-list swiper-wrapper"><!--swiper-wrapper class -->
+                                <li class="testimonials swiper-slide">
+                                    <img src="images/u1.png" alt="User" class="user-image">
+                                    <h3 class="name">Rachel</h3>
+                                    <i class="feedback">"I love the hot coffee. Its my favorite." </i>
+                                </li>
+
+                                <li class="testimonials swiper-slide"><!-- swiper-slide class for carousel -->
+                                    <img src="images/u5.png" alt="User" class="user-image">
+                                    <h3 class="name">Hailey</h3>
+                                    <i class="feedback">"Fast service and great coffee. Best decaf I have ever had.I highly recommend."</i>
+                                </li>
+
+                                <li class="testimonials swiper-slide">
+                                    <img src="images/u2.png" alt="User" class="user-image">
+                                    <h3 class="name">William</h3>
+                                    <i class="feedback">"Excellent quality! fresh beans and arrived promptly."</i>
+                                </li>
+
+                                <li class="testimonials swiper-slide">
+                                    <img src="images/u3.png" alt="User" class="user-image">
+                                    <h3 class="name">David</h3>
+                                    <i class="feedback">"Fantastic flavor. Fresh and aromatic. I will order again."</i>
+                                </li>
+
+                                <li class="testimonials swiper-slide">
+                                    <img src="images/u4.png" alt="User" class="user-image">
+                                    <h3 class="name">Angel</h3>
+                                    <i class="feedback">"Great espresso blend ! Bold and smooth flavor.Quick shipping."</i>
+                                </li>
+                            </ul>
+
+                            <!-- If we need pagination -->
+                            <div class="swiper-slide-button swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-slide-button swiper-button-prev"></div>
+                            <div class="swiper-slide-button swiper-button-next"></div>
+
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+             </section>
+
+                <!-- Gallery Section -->
+             <section class="gallery-section">
+                <h2 class="section-title">Gallery</h2>
+                <div class="section-content">
+                    <ul class="gallery-list">
+                        <li class="gallery-item">
+                            <img src="images/img 9.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+                        <li class="gallery-item">
+                            <img src="images/img 10.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+                        <li class="gallery-item">
+                            <img src="images/img 11.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+                        <li class="gallery-item">
+                            <img src="images/img 12.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+                        <li class="gallery-item">
+                            <img src="images/img 13.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+                        <li class="gallery-item">
+                            <img src="images/img 14.png" alt="Gallery Image" class="gallery-image">
+                        </li>
+
+                    </ul>
+                </div>
+             </section>
+
+             <!-- Contact Section -->
+              <section class="contact-section">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-content">
+                    <ul class="contact-info-list">
+                        <li class="contact-info">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                            <p>Santiago Bernabeu, Madrid 28036 </p>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@solobe4.com </p>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>(91) 123-6544</p>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fas fa-clock"></i>
+                            <p>Monday - Saturday: 8:00AM - 5:00 PM </p>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fas fa-clock"></i>
+                            <p>Sunday: Closed </p>
+                        </li>
+                        <li class="contact-info">
+                            <i class="fa-solid fa-globe"></i>
+                            <p>www.solobe4u.com </p>
+                        </li>
+                    </ul>
+                    <form action="#" class="contact-form">
+                        <input type="text" placeholder="Your Name" class="form-input" required>
+                        <input type="email" placeholder="Your email" class="form-input" required>
+                        <textarea placeholder="Your Message" class="form-input" required></textarea>
+                        <button class="submit-button">Submit</button>
+                    </form>
+                </div>
+              </section>
                 
+              <!-- Footer Section -->
+               <footer class="footer-section">
+                    <div class="section-content">
+                        <p class="copyright-text">@ 2026 Coffee Shop</p>
+                        <div class="social-link-list">
+                            
+                        </div>
+                    </div>
+               </footer>
     </main>
 </body>
+
+    <!-- Swiper JS for carousel -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- It doesn't work if custom js code is placed before Swiper JS -->
+    <!-- Custom Script -->
     <script src="script.js"></script>
+
 </html>
