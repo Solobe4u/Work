@@ -1,5 +1,7 @@
-const menuOpenBtn = document.getElementById('menu-open');
+const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 const menuCloseBtn = document.getElementById('menu-close');
+const menuOpenBtn = document.getElementById('menu-open');
+
 
 menuOpenBtn.addEventListener("click", () => {
     document.body.classList.toggle("menu-open");// Toggle the "menu-open" class on the body element when the menu open button is clicked
@@ -7,7 +9,10 @@ menuOpenBtn.addEventListener("click", () => {
 
 menuCloseBtn.addEventListener("click", () => menuOpenBtn.click());// Remove the "menu-open" class from the body element when the menu close button is clicked
 
-
+// Close Menu when the nav link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => menuOpenBtn.click());
+})
 
 
 // For the testimonials carousel, we are using Swiper.js library. The following code initializes the Swiper instance with the specified parameters for vertical direction, looping, pagination, navigation arrows, and scrollbar. Copied from Swiper.js documentation: https://swiperjs.com/swiper-api#parameters
