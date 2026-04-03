@@ -201,12 +201,14 @@ button{
   position: relative;
 }
 
-#show .one .details{
+/* Another way to center the details div is to use absolute positioning and transform property 
+
+ #show .one .details{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  /*Center the details div*/
-/* background-color: rgba(255, 255, 255, 0.8); */
+  transform: translate(-50%, -50%);  Center the details div
+ background-color: rgba(255, 255, 255, 0.8); 
   color: black;
   text-align: center;
   -webkit-transition:0.3s ease ;
@@ -220,11 +222,11 @@ button{
 #show .one:hover .details{
   cursor: pointer;
   background-color: rgba(275, 178, 178, 0.7);
-}/* When someone hovers their mouse over an element with the class .one (which is inside #show), style the child element with the class .details*/
+} When someone hovers their mouse over an element with the class .one (which is inside #show), style the child element with the class .details
 
 #show .one .details button{
   display: inline-block;
-  /*Make the button an inline-block element so it can have padding and margin*/
+  Make the button an inline-block element so it can have padding and margin
   font-size: 14px;
   font-weight: 500;
   background: none;
@@ -241,7 +243,7 @@ button{
   -moz-transform: translateY(30px);
   -ms-transform: translateY(30px);
   -o-transform: translateY(30px);
-  transform: translateY(30px); /* Move the button down by 30px */
+  transform: translateY(30px);  Move the button down by 30px 
 }
 
 #show .one .details button:hover{
@@ -251,5 +253,104 @@ button{
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
-  transform: translateY(0); /* Move the button back to its original position */
+   transform: translateY(0); Move the button back to its original position 
 }
+
+#show .one:nth-child(1) .details{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  flex-direction: column;
+}
+
+#show .one:nth-child(2) .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#show .one:nth-child(3) .details{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: end;
+  flex-direction: column;
+} 
+  
+*/
+
+#show .one .details{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition:0.3s ease ;
+  -moz-transition:0.3s ease ;
+  -ms-transition:0.3s ease ;
+  -o-transition:0.3s ease ;
+  transition:0.3s ease ;
+
+}
+
+#show .one:hover .details{
+  cursor: pointer;
+  background-color: rgba(275, 178, 178, 0.6);
+} 
+
+#show .one .details button{
+  display: inline-block;
+  /*Make the button an inline-block element so it can have padding and margin*/
+  font-size: 14px;
+  font-weight: 500;
+  background: none;
+  border-bottom: 1px solid #2a2a2a;
+  padding: 3px;
+  color: #2a2a2a;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transform: translateY(70px);
+  /*Move the button down by 30px*/
+
+}
+
+#show .one .details button:hover{
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  }
+
+  #show .one:nth-child(1) .details{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: start;
+  flex-direction: column;
+}
+
+#show .one:nth-child(2) .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+#show .one:nth-child(3) .details{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: end;
+  flex-direction: column;
+} 
+
