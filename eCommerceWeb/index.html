@@ -23,44 +23,45 @@
 <body>
 
       <!-- Navigation Bar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3">
-            <div class="container"><!--Container-fluid there is no space at both extremes but in container there is space-->
-              <img src="img/logoo.png" alt="logo"/>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
+            <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary py-3 fixed-top">
+                <div class="container"><!--Container-fluid there is no space at both extremes but in container there is space-->
+                  <img src="img/logo s.png" width="150px" height="50px" padding="0" alt="logo"/>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> custom nav bar from bootstrap-->
+                    <span id="bar"><i class="fa-solid fa-bars"></i></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                      </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                  </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                      </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                      </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                      </li>
 
-                  <li class="nav-item">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                  </li>
+                      <li class="nav-item">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                      </li>
 
-                </ul>
+                    </ul>
 
-              </div>
-            </div>
-      </nav>
+                  </div>
+                </div>
+            </nav>
   
       <!-- Home Section -->
       <section id="home">
@@ -68,15 +69,70 @@
           <div class="row align-items-center">
             <div class="col-md-6">
               <h1>Welcome to <span>Sam's Buy</span></h1>
-              <p>Your one-stop shop for all your needs. Discover a wide range of products at unbeatable prices. Shop now and experience the best in quality and service.</p>
+              <p><span>Your one-stop shop for all your needs. Discover a wide range of products at unbeatable prices. Shop now and experience the best in quality and service.</span></p>
               <a href="#" class="btn btn-primary">Shop Now</a>  <!--Bootstrap Button class was used in link-->
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
               <img src="img/model2.jpg" alt="Home Image" class="img-fluid">
-              <!-- https://www.freepik.com/free-photos-vectors/fashion-ecommerce-mens -->
-            </div>
+               https://www.freepik.com/free-photos-vectors/fashion-ecommerce-mens 
+            </div> -->
           </div>
         </div>
+
+        </section>
+
+
+        <!-- Brand Section -->
+         <section id="brand" class="container">
+            <div class="row m-0 py-5 d-flex flex-wrap justify-content-between align-items-center"><!--Bootstrap row class is used to create a horizontal group of columns. m-0 is used to remove the default margin from the row, py-5 is used to add vertical padding to the row, d-flex is used to make the row a flex container, flex-wrap is used to allow the items to wrap onto multiple lines if necessary, justify-content-between is used to distribute the items evenly with space between them, align-items-center is used to vertically center the items within the row-->
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6" src="img/brand/3.jpg"  alt="Brand 2" >
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6" src="img/brand/2.jpg"  alt="Brand 3" >
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6" src="img/brand/1.png"  alt="Brand 4" >
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6" src="img/brand/6.png"  alt="Brand 6" >
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6 " src="img/brand/4.jpg"  alt="Brand 5" >
+              <img class="img-fluid col-lg-2 col-md-4 col-sm-6 " src="img/brand/5.jpg"  alt="Brand 1" >
+            </div>
+
+
+
+         </section>
+
+         <!--Advertisement Section  -->
+         <section id="show" class="w-100">
+            <div class="row p-0 m-0">
+              <div class="one col-lg-4 col-md-12 col-sm-12 position-relative p-0">
+                <img src="img/show/1.jpg" alt="watches" class="img-fluid">
+                <div class="details">
+                  <h2>Watches Up To 50% Off</h2>
+                  <button class="text-uppercase">Shop now</button>
+                </div>
+              </div>
+
+              <div class="one col-lg-4 col-md-12 col-sm-12 position-relative p-0">
+                <img src="img/show/2.jpg" alt="Sportwears" class="img-fluid">
+                <div class="details">
+                  <h2>All types of Sportwears are available </h2>
+                  <button class="text-uppercase">Shop now</button>
+                </div>
+              </div>
+
+              <div class="one col-lg-4 col-md-12 col-sm-12 position-relative p-0">
+                <img src="img/show/3.jpg" alt="Sneakers" class="img-fluid">
+                <div class="details">
+                  <h2>Sneakers are available at discounted prices</h2>
+                  <button class="text-uppercase">Shop now</button>
+                </div>
+              </div>
+
+            </div>
+         </section>
+
+
+
+
+
+
+
 
 
 
